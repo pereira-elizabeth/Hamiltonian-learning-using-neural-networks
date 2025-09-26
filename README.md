@@ -44,7 +44,8 @@ Shows how prediction fidelity drops as input noise increases when we remove over
 Clone this repository and install dependencies:
 
 ```bash
-git clone https://github.com/<your-username>/ml-fidelity-demo.git
-cd ml-fidelity-demo
+git clone https://github.com/pereira-elizabeth/Hamiltonian-learning-using-neural-networks.git
+cd Hamiltonian-learning-using-neural-networks
 python -m venv venv && source venv/bin/activate
 pip install -r requirements.txt
+
