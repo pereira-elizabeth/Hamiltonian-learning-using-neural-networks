@@ -16,13 +16,9 @@ The jupyter notebook includes the necessary functions to make the training and t
 ---
 
 ## ⚡ Demo Results
-
-### Fidelity vs Noise
-Shows how prediction fidelity drops as input noise increases when there is overfitting of training data.
-![Fidelity vs Noise](results/fidelityvsnoise_with_overfitting.png)
-
-Shows how prediction fidelity drops as input noise increases when we remove overfitting of training data by using a different neural network.
-![Fidelity vs Noise](results/fidelityvsnoise_nooverfitting.png)
+### Predicted vs True Onsite Energies in the absence of noise
+Scatter plot with regression line.
+![Prediction vs True](results/pred_vs_true_jointplot_test.png)
 
 ### LDOS Comparison
 True vs predicted local density of states (LDOS) for one test sample without any noise.
@@ -34,9 +30,12 @@ True vs predicted local density of states (LDOS) for one test sample with noise 
 True vs predicted local density of states (LDOS) for one test sample with noise of strength $0.2$ without overfitting.
 ![LDOS comparison](results/ldos_true_pred_noisy_nooverfitting.png)
 
-### Predicted vs True Onsite Energies
-Scatter plot with regression line.
-![Prediction vs True](results/pred_vs_true_jointplot_test.png)
+### Fidelity vs Noise
+Shows how prediction fidelity drops as input noise increases when there is overfitting of training data.
+![Fidelity vs Noise](results/fidelityvsnoise_with_overfitting.png)
+
+Shows how prediction fidelity drops as input noise increases when we remove overfitting of training data by using a different neural network.
+![Fidelity vs Noise](results/fidelityvsnoise_nooverfitting.png)
 
 ---
 
