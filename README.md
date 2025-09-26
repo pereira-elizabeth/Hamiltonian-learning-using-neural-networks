@@ -8,7 +8,7 @@ The jupyter notebook includes the necessary functions to make the training and t
 ---
 
 ## 📖 Contents
-- `ml_fidelity_vs_noise.ipynb` – Jupyter notebook with full workflow
+- `real_onsite_enery_learning.ipynb` – Jupyter notebook with full workflow
 - `results/` – saved plots used in this README
 - `requirements.txt` – dependencies for reproducibility
 - `.gitignore` – ignores caches, data, checkpoints
