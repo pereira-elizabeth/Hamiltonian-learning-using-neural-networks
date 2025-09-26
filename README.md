@@ -3,7 +3,7 @@
 # ML Fidelity vs Noise — Skills Demo
 
 This repository contains a small **machine learning demo** in condensed matter physics:  
-predicting real onsite energies of a 1D chain and comparing **predicted vs true spectral densities**.  
+predicting real onsite energies of a 1D chain and comparing **predicted vs true spectral densities** (local density of states or LDOS).  
 The jupyter notebook includes the necessary functions to make the training and testing data of the neural network, the neural network, and also a code layout to study the robustness of neural netowrk, it is studied using the quantity called fidelity. The jupyter file has comments throughout the file for easy explanation.
 ---
 
