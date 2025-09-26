@@ -32,10 +32,10 @@ True vs predicted local density of states (LDOS) for one test sample with noise 
 
 ### Fidelity vs Noise
 Shows how prediction fidelity drops as input noise increases when there is overfitting of training data.
-![Fidelity vs Noise](results/fidelityvsnoise_with_overfitting.png)
+![Fidelity vs Noise](results/fidelity_vs_noise_with_overfitting.png)
 
 Shows how prediction fidelity drops as input noise increases when we remove overfitting of training data by using a different neural network.
-![Fidelity vs Noise](results/fidelityvsnoise_nooverfitting.png)
+![Fidelity vs Noise](results/fidelity_vs_noise_nooverfitting.png)
 
 ---
 
