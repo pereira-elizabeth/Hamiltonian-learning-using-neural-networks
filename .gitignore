@@ -205,3 +205,76 @@ cython_debug/
 marimo/_static/
 marimo/_lsp/
 __marimo__/
+
+# --- Python ---
+__pycache__/
+*.py[cod]
+*$py.class
+*.pyo
+
+# Virtual envs
+.env
+.venv
+venv/
+env/
+
+# Build / packaging
+build/
+dist/
+*.egg-info/
+pip-wheel-metadata/
+
+# Logs & caches
+*.log
+logs/
+.cache/
+.ipynb_checkpoints/
+.pytest_cache/
+.mypy_cache/
+.python-version
+
+# --- Notebooks ---
+# Clear heavy outputs before commit; keep checkpoints out
+.ipynb_checkpoints/
+# (optional) ignore rendered exports
+*.html
+*.pdf
+
+# --- Data & models (keep local by default) ---
+data/
+!data/README.md          # allow a readme explaining how to get data
+models/
+!models/.gitkeep         # keep folder visible
+results/
+results/*.npy
+results/*.npz
+results/*.h5
+# keep tiny demo images if you want them in README
+!results/*.png
+!results/*.jpg
+
+# --- Secrets (never commit) ---
+*.env
+*.secret
+*.key
+*.pem
+*.crt
+token_*
+id_*
+
+# --- IDE / OS noise ---
+# macOS
+.DS_Store
+.AppleDouble
+._*
+# Windows
+Thumbs.db
+desktop.ini
+# VS Code / JetBrains
+.vscode/
+.idea/
+
+# --- Optional: Jupytext/nbdime artifacts ---
+*.ipynb_checkpoints
+.jupytext.toml
+
