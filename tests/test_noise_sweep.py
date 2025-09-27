@@ -5,7 +5,7 @@ sys.path.insert(0, str(pathlib.Path(__file__).resolve().parents[1]))
 import numpy as np
 from src.ml_models import create_model
 from src.physics_utilities import adding_noise, fidelity
-from src.fidelity_vs_noise_study import fidelity_v_noise
+from src.fidelity_vs_noise_study import predict_on_noise
 
 def test_fidelity_v_noise_minimal_run():
     rng = np.random.default_rng(0)
