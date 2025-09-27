@@ -9,7 +9,7 @@
 ![Code Size](https://img.shields.io/github/languages/code-size/pereira-elizabeth/hamiltonian-ml)
 <!-- CI badge (works after you add .github/workflows/tests.yml) -->
 <!-- ![Build](https://github.com/pereira-elizabeth/hamiltonian-ml/actions/workflows/tests.yml/badge.svg) -->
-
+This project shows how a neural network can learn the “fingerprint” of a material and predict how it behaves when we change its properties.
 
 This repository contains a **machine learning demo** in condensed matter physics:  
 predicting real onsite energies of a 1D tight-binding chain and comparing **spectral densities (local density of states, LDOS) for predicted vs true Hamiltonian parameters**.
