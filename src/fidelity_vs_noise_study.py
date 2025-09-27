@@ -24,4 +24,4 @@ def predict_on_noise(min_noise, max_noise, Xtr, Ytr, Xte, Yte,
         F_test.append(float(np.asarray(fidelity(Yte_p, Yte_n)).mean()))
         
 
-    return noise_vals, np.asarray(F_train), np.asarray(F_test), Y_trp
+    return noise_vals, np.asarray(F_train), np.asarray(F_test), Yte_p
