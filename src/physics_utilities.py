@@ -59,3 +59,49 @@ def fidelity(y_p, y_t): #fidelity i.e. correlation between true and predicted va
         (np.mean(np.square(br)) - np.square(np.mean(br)))
         ) ** 0.5    
     return F
+
+import numpy as np
+from scipy import linalg
+
+def ldos_map_from_pred(y_pred, N, f, eigensys, ldos,
+                       *, col=0, freq_min=-2.0, freq_max=2.0, dtype=np.float64):
+    """
+    Compute LDOS map Z(f, N) from predicted onsite values.
+
+    Parameters
+    ----------
+    y_pred : array
+        Predicted onsite values; 1D or 2D. If 2D, takes first N rows from column `col`.
+    N : int
+        Number of sites.
+    f : int
+        Number of frequency points.
+    eigensys : callable
+        Function that builds the Hamiltonian: H = eigensys(v).
+    ldos : callable
+        LDOS function: ldos(eigs, vecs, omega) -> (N,).
+    col : int
+        Column index if y_pred is 2D. Default 0.
+    freq_min, freq_max : float
+        Frequency grid range.
+    dtype : numpy dtype
+        dtype for arrays.
+
+    Returns
+    -------
+    Z : (f, N) array
+        LDOS map (rows = frequencies, cols = sites).
+    """
+    yp = np.asarray(y_pred)
+    v = yp[:N, col] if yp.ndim == 2 else yp[:N]
+    v = np.asarray(v, dtype=dtype).squeeze()
+
+    H = eigensys(v)
+    w, V = linalg.eigh(H)
+
+    freqs = np.linspace(freq_min, freq_max, f, dtype=dtype)
+    Z = np.zeros((f, N), dtype=dtype)
+    for i, om in enumerate(freqs):
+        Z[i, :] = ldos(w, V, om)
+
+    return Z
