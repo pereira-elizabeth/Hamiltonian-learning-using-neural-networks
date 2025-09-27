@@ -61,7 +61,13 @@ Local density of states (LDOS) for a single test sample:
   ![Fidelity vs Noise](results/fidelity_vs_noise_nooverfitting.png)
 
 ---
+## Tests
+Run the test suite:
 
+```bash
+pytest -q
+```
+---
 ## 🚀 Quickstart
 
 Clone this repository and install dependencies:
