@@ -15,7 +15,7 @@ def test_fidelity_v_noise_minimal_run():
     X_test  = rng.normal(size=(32, 12)).astype("float32")
     y_test  = rng.normal(size=(32, 1)).astype("float32")
 
-    noise_vals, Ftr, Fte y_pred = predict_on_noise(
+    noise_vals, Ftr, Fte, y_pred = predict_on_noise(
         0.0, 0.1,
         X_train, y_train, X_test, y_test,
         n_points=3, epochs=1, batch_size=16,
