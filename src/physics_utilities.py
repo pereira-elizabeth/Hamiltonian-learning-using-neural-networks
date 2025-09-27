@@ -1,4 +1,5 @@
 import numpy as np
+import scipy
 from scipy import linalg
 
 def eigensys(v1): #Hamiltonian of the system of a 1D chain with random real onsite energies
