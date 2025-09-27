@@ -1,14 +1,21 @@
-# Hamiltonian-learning-using-neural-networks
 
-# ML Fidelity vs Noise — Skills Demo
+# Hamiltonian Learning using Neural Networks
 
-This repository contains a small **machine learning demo** in condensed matter physics:  
-predicting real onsite energies of a 1D chain and comparing **predicted vs true spectral densities** (local density of states or LDOS).  
-The jupyter notebook includes the necessary functions to make the training and testing data of the neural network, the neural network, and also a code layout to study the robustness of neural netowrk, it is studied using the quantity called fidelity. The jupyter file has comments throughout the file for easy explanation.
+## ML Fidelity vs Noise — Skills Demo
+
+This repository contains a **machine learning demo** in condensed matter physics:  
+predicting real onsite energies of a 1D tight-binding chain and comparing **spectral densities (local density of states, LDOS) for predicted vs true Hamiltonian parameters**.
+
+The Jupyter notebook includes:
+- data generation functions for training and testing,
+- a simple neural network model (Keras/TensorFlow),
+- a framework to study robustness of predictions against noise using **fidelity** as a metric,
+- inline comments throughout to make the workflow easy to follow.
+
 ---
 
 ## 📖 Contents
-- `real_onsite_enery_learning.ipynb` – Jupyter notebook with full workflow
+- `real_onsite_energy_learning.ipynb` – main Jupyter notebook
 - `results/` – saved plots used in this README
 - `requirements.txt` – dependencies for reproducibility
 - `.gitignore` – ignores caches, data, checkpoints
@@ -16,26 +23,34 @@ The jupyter notebook includes the necessary functions to make the training and t
 ---
 
 ## ⚡ Demo Results
-### Predicted vs True Onsite Energies in the absence of noise
+
+### Predicted vs True Onsite Energies (no noise)
 Scatter plot with regression line.
 ![Prediction vs True](results/pred_vs_true_jointplot_test.png)
 
-### LDOS Comparison
-True vs predicted local density of states (LDOS) for one test sample without any noise.
-![LDOS comparison](results/ldos_true_pred1.png)
+---
 
-True vs predicted local density of states (LDOS) for one test sample with noise of strength $0.2$ with overfitting.
-![LDOS comparison](results/ldos_true_pred_noisy_with_overfitting.png)
+### LDOS Comparisons
+Local density of states (LDOS) for a single test sample:
 
-True vs predicted local density of states (LDOS) for one test sample with noise of strength $0.2$ without overfitting.
-![LDOS comparison](results/ldos_true_pred_noisy_nooverfitting.png)
+- Without noise  
+  ![LDOS comparison](results/ldos_true_pred1.png)
+
+- With noise strength = 0.2, **with overfitting**  
+  ![LDOS comparison](results/ldos_true_pred_noisy_with_overfitting.png)
+
+- With noise strength = 0.2, **without overfitting**  
+  ![LDOS comparison](results/ldos_true_pred_noisy_nooverfitting.png)
+
+---
 
 ### Fidelity vs Noise
-Shows how prediction fidelity drops as input noise increases when there is overfitting of training data.
-![Fidelity vs Noise](results/fidelity_vs_noise_with_overfitting.png)
 
-Shows how prediction fidelity drops as input noise increases when we remove overfitting of training data by using a different neural network.
-![Fidelity vs Noise](results/fidelity_vs_noise_nooverfitting.png)
+- With overfitting  
+  ![Fidelity vs Noise](results/fidelity_vs_noise_with_overfitting.png)
+
+- Without overfitting (improved network)  
+  ![Fidelity vs Noise](results/fidelity_vs_noise_nooverfitting.png)
 
 ---
 
@@ -46,6 +61,5 @@ Clone this repository and install dependencies:
 ```bash
 git clone https://github.com/pereira-elizabeth/Hamiltonian-learning-using-neural-networks.git
 cd Hamiltonian-learning-using-neural-networks
-python -m venv venv && source venv/bin/activate
+python -m venv venv && source venv/bin/activate   # Windows: venv\Scripts\Activate.ps1
 pip install -r requirements.txt
-
