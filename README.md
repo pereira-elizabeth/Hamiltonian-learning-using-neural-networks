@@ -3,6 +3,14 @@
 
 ## ML Fidelity vs Noise — Skills Demo
 
+![Python](https://img.shields.io/badge/python-3.10%2B-blue)
+![License](https://img.shields.io/badge/license-MIT-green)
+![Last Commit](https://img.shields.io/github/last-commit/pereira-elizabeth/hamiltonian-ml)
+![Code Size](https://img.shields.io/github/languages/code-size/pereira-elizabeth/hamiltonian-ml)
+<!-- CI badge (works after you add .github/workflows/tests.yml) -->
+<!-- ![Build](https://github.com/pereira-elizabeth/hamiltonian-ml/actions/workflows/tests.yml/badge.svg) -->
+
+
 This repository contains a **machine learning demo** in condensed matter physics:  
 predicting real onsite energies of a 1D tight-binding chain and comparing **spectral densities (local density of states, LDOS) for predicted vs true Hamiltonian parameters**.
 
