@@ -1,6 +1,6 @@
 import numpy as np
 
-def fidelity_v_noise(min_noise, max_noise, Xtr, Ytr, Xte, Yte,
+def predict_on_noise(min_noise, max_noise, Xtr, Ytr, Xte, Yte,
                      *, n_points=10, epochs=20, batch_size=16,
                      create_model, adding_noise, fidelity):
     """Return arrays: noise_vals, F_train, F_test (no plotting)."""
@@ -22,5 +22,6 @@ def fidelity_v_noise(min_noise, max_noise, Xtr, Ytr, Xte, Yte,
         # cast to scalar if fidelity returns an array
         F_train.append(float(np.asarray(fidelity(Ytr_p, Ytr_n)).mean()))
         F_test.append(float(np.asarray(fidelity(Yte_p, Yte_n)).mean()))
+        
 
-    return noise_vals, np.asarray(F_train), np.asarray(F_test)
+    return noise_vals, np.asarray(F_train), np.asarray(F_test), Y_trp
